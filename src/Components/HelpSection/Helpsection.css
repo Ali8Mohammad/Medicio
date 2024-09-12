@@ -1,0 +1,6 @@
+.helpSection {
+    background-color: var(--main-bgcolor);
+}
+.helpSectionCol {
+    padding: 0 100px;
+}

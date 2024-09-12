@@ -1,0 +1,10 @@
+.main-bgcolor {
+    background-color: var(--main-bgcolor) !important;
+}
+.logoNav img{
+    width: 135px;
+}
+nav a {
+    margin: 0px 7px !important;
+    font-weight: 500 !important;
+}

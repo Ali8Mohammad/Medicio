@@ -1,0 +1,6 @@
+ .iconCard {
+    color: var(--main-bgcolor) !important;
+}
+.cardsSection {
+    padding: 0 100px;
+}
