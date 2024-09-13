@@ -31,11 +31,9 @@ const App = () => {
 
   return (
     <>
-    <header className="mb-5">
       <NavInfo navInfoData={navInfoData}/>
       <NavBar logo={logo} items={items} btn={'Make an Appointment'}/>
       <Hero carouselData={carouselData} />
-    </header>
       <CardComponent cardData={cardData} />
       <HelpSection helpSectionData={helpSectionData}/>
       <AboutSection/>
