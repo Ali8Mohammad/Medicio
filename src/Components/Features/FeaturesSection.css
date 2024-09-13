@@ -1,0 +1,19 @@
+.iconBackGround {
+    width: 80px;
+    height: 50px;
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.103);
+    transition: .3s all ease-in-out;
+}
+.cardRow,.titleAboutCard {
+    transition: .3s all ease-in-out;
+}
+.cardRow:hover .iconBackGround {
+    background-color: var(--main-bgcolor);
+}
+.cardRow:hover .cardIcon {
+    color: white !important;
+}
+.cardRow:hover .titleAboutCard {
+    color: var(--main-bgcolor);
+}

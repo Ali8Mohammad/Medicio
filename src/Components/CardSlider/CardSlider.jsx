@@ -3,6 +3,7 @@ import { Card, Carousel, Col, Row, Image } from "react-bootstrap";
 import "./CardSlider.css";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import MainTitle from "../MainTitle/MainTitle";
 
 const Slider = ({ quotes }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,7 +18,6 @@ const Slider = ({ quotes }) => {
     );
   };
 
-
   const getVisibleQuotes = () => {
     const visibleQuotes = [];
     for (let i = 0; i < 3; i++) {
@@ -27,61 +27,67 @@ const Slider = ({ quotes }) => {
   };
 
   return (
-    <Carousel
-      className="px-5"
-      controls={false} 
-      indicators={false}
-      interval={null} 
-    >
-      <Carousel.Item>
-        <Row className="d-flex justify-content-between align-items-center p-0" style={{ transition:"transform .5s ease" }}>
-          {getVisibleQuotes().map((quote, index) => (
-            <Col
-              key={index}
-              md={3}
-              className="mb-4 d-flex justify-content-center align-items-center shadow"
-              style={{ transition:"transform .5s ease" }} 
-            >
-              <Card style={{ width: "18rem", border: "none", transition:"transform .5s ease" }}>
-                <div className="d-flex justify-content-center" style={{ transition:"transform .5s ease" }}>
-                <Card.Text className="quote-text mb-5 pt-3 w-100">
-                <FontAwesomeIcon className="quote-icon me-2" icon={faQuoteLeft} />     
-                {`"${quote.quote}"`}
-                <FontAwesomeIcon className="quote-icon ms-2" icon={faQuoteRight} />
-                  </Card.Text>
-                </div>
-                <Image
-                    src={quote.image}
-                    roundedCircle
-                    fluid
-                    style={{
-                      width: "80px",
-                      height: "80px",
-                      objectFit: "cover",
-                    }}
-                  />
-                <Card.Body className="text-center">
-                  
-                  <Card.Title className="mt-3">{quote.name}</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">
-                    {quote.profession}
-                  </Card.Subtitle>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Carousel.Item>
+    <>
+      <MainTitle
+        title={"Testimonials"}
+        par={
+          "Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit"
+        }
+      />
+      <Carousel
+        className="container"
+        controls={false}
+        indicators={false}
+        interval={null}
+      >
+        <Carousel.Item>
+          <Row
+            className="d-flex justify-content-between align-items-center p-0"
+          >
+            {getVisibleQuotes().map((quote, index) => (
+              <Col
+                key={index}
+                xxl={3}
+                md={3}
+                xl={3}
+                className="mb-4 px-0 d-flex justify-content-center align-items-center"
+              >
+                <Card className="border-light rounded">
+                  <div className="d-flex justify-content-start flex-column position-relative">
+                    <Card.Text className="quote-text py-5 mb-5 pt-3 w-100 px-4">
+                      <FontAwesomeIcon
+                        className="quote-icon me-2"
+                        icon={faQuoteLeft}
+                      />
+                      {quote.quote}
+                      <FontAwesomeIcon
+                        className="quote-icon ms-2"
+                        icon={faQuoteRight}
+                      />
+                    </Card.Text>
+                    <div className="divbg-white">
+                      <Image
+                      className="imageCard"
+                      src={quote.image}
+                      roundedCircle
+                      fluid
+                      />
+                    </div>
+                  </div>
 
-      <div className="custom-carousel-controls">
-        <button className="prev-btn" onClick={handlePrev}>
-          &#10094;
-        </button>
-        <button className="next-btn" onClick={handleNext}>
-          &#10095;
-        </button>
-      </div>
-    </Carousel>
+                  <Card.Body className="text-center">
+                    <Card.Title className="mt-3">{quote.name}</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">
+                      {quote.profession}
+                    </Card.Subtitle>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </Carousel.Item>
+      </Carousel>
+    </>
   );
 };
 

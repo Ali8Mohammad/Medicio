@@ -1,0 +1,14 @@
+/* src/Components/GallerySlider/GallerySlider.css */
+.custom-carousel .carousel-indicators li {
+    background-color: #00bcd4; 
+  }
+  
+  .custom-carousel .carousel-indicators .active {
+    background-color: #007bff; 
+  }
+  
+  .custom-carousel .carousel-item img {
+    border: 5px solid #00bcd4; 
+    border-radius: 5px;
+  }
+  

@@ -25,8 +25,25 @@
     color: var(--main-bgcolor);
   }
   .quote-text {
-    background-color: rgb(99, 99, 99);
+    width: 100% !important;
+    background-color: rgba(99, 99, 99, 0.055);
 
+  }
+  .divbg-white {
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    top: -140px;
+    left: 20px;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(50%);
+    position: relative !important;
+  }
+  .imageCard {
+    width: 90% !important;
   }
   .prev-btn {
     margin-left: 20px;

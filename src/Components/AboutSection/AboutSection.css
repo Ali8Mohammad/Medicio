@@ -1,3 +1,36 @@
 .doubleCheck {
     color: var(--main-bgcolor);
 }
+
+.iconframe {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--main-bgcolor);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px var(--main-bgcolor);
+}
+.PlayIcon {
+    transition: scale .5s ease-in-out;
+    transition: color .3s ease-in-out;
+}
+.videoFrame:hover ~ .iconframe .PlayIcon {
+    animation: playVideo 1s  1 normal ease-in-out;
+}
+.cardIcon {
+    font-size: 40px !important;
+    color: var(--main-bgcolor);
+}
+@keyframes playVideo {
+    0% {
+        scale: 0;
+        color: white;
+    }
+    50% {
+        scale: 5;
+       
+    }
+}

@@ -3,58 +3,11 @@ import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import FormControl from './../FormControl/FormControl'; 
 import MainTitle from '../MainTitle/MainTitle';
 
-const fields = [
-  { type: 'text', placeholder: 'Enter your name', name: 'name' },
-  { type: 'email', placeholder: 'Enter your email', name: 'email' },
-  { type: 'text', placeholder: 'Enter your phone number', name: 'phone' },
-  { type: 'date', name: 'date' },
-  {
-    type: 'select',
-    name: 'department',
-    options: [
-      { label: 'Select Department', value: '' },
-      { label: 'Cardiology', value: 'cardiology' },
-      { label: 'Neurology', value: 'neurology' },
-      { label: 'Orthopedics', value: 'orthopedics' },
-    ],
-  },
-  {
-    type: 'select',
-    name: 'doctor',
-    options: [
-      { label: 'Select Doctor', value: '' },
-      { label: 'Dr. Smith', value: 'dr-smith' },
-      { label: 'Dr. Johnson', value: 'dr-johnson' },
-      { label: 'Dr. Brown', value: 'dr-brown' },
-    ],
-  },
-  { type: 'textarea', placeholder: 'Enter your message', name: 'message' },
-];
 
-const AppointmentForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    date: '',
-    department: '',
-    doctor: '',
-    message: '',
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log(formData);
-  };
+const AppointmentForm = ({fields, formData , handleChange, handleSubmit}) => {
 
   return (
-    <Container>
+    <Container fluid className='second-bgcolor my-5 py-5'>
       <MainTitle title={'MAKE AN APPOINTMENT'} par={'Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit'}/>
       <Form onSubmit={handleSubmit}>
         <Row className="mb-4">
@@ -99,7 +52,7 @@ const AppointmentForm = () => {
         </Row>
         <Row className="justify-content-center">
           <Col xs="auto">
-            <Button variant="primary" type="submit">
+            <Button className='main-bgcolor border-0' type="submit">
               Make an Appointment
             </Button>
           </Col>

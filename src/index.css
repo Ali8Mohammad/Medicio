@@ -6,6 +6,7 @@
 }
 :root {
   --main-bgcolor: #3fbbc0;
+  --second-bgcolor: #f7fcfc;
   --default-color: #444444;
   --default-font: "Roboto", 'system-ui', '-apple-system', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', "Noto Sans", "Liberation Sans",'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",'sans-serif';
@@ -13,6 +14,10 @@
 }
 .default-color {
   color: var(--default-color) !important;
+}
+.second-bgcolor {
+  background-color: var(--second-bgcolor);  
+  padding: 0 100px;
 }
 html {
   font-family: var(--default-font);

@@ -1,38 +1,19 @@
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "./AboutSection.css";
-import videoFrame from "./../../assets/img/about.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAward, faFlask, faHospital, faUserDoctor } from "@fortawesome/free-solid-svg-icons";
 import MainTitle from "../MainTitle/MainTitle";
 
-const AboutSection = () => {
-  // titleData
-  const aboutData = {
-    img: videoFrame,
-    caption:
-      "Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.",
-    par: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    par2: "Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident",
-  };
-  const listData = [
-    {
-      text: "Ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
-    {
-      text: "Duis aute irure dolor in reprehenderit in voluptate velit.",
-    },
-    {
-      text: "Ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
-  ];
+const AboutSection = ({aboutData , listData, aboutCard}) => {
   return (
     <Container className="my-5">
       <Row className="text-center mb-4">
         <MainTitle title={"About Us"} par={"Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit"}/>
       </Row>
       <Row className="align-items-center">
-        <Col md={6} className="mb-4 mb-md-0">
-          <img className="w-100" src={aboutData.img} alt="" />
+        <Col md={6} className="mb-4 mb-md-0 position-relative">
+          <img className="w-100 videoFrame" src={aboutData.img} alt="" />
+          <span className="iconframe d-flex justify-content-center align-items-center">
+          {aboutData.icon}
+          </span>
         </Col>
         <Col md={6}>
           <h3 className="mb-4">{aboutData.caption}</h3>
@@ -71,42 +52,21 @@ const AboutSection = () => {
       </Row>
 
       <Row className="text-center mt-5">
-        <Col md={3} sm={6} className="mb-4">
-          <Card className="border-0 shadow">
-            <Card.Body>
-              <FontAwesomeIcon icon={faUserDoctor} />
-              <h4 className="mb-0">25</h4>
-              <p className="text-muted">Doctors</p>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={3} sm={6} className="mb-4">
-          <Card className="border-0 shadow">
-            <Card.Body>
-            <FontAwesomeIcon icon={faHospital} />
-              <h4 className="mb-0">15</h4>
-              <p className="text-muted">Departments</p>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={3} sm={6} className="mb-4">
-          <Card className="border-0 shadow">
-            <Card.Body>
-              <FontAwesomeIcon icon={faFlask} />
-              <h4 className="mb-0">8</h4>
-              <p className="text-muted">Research Labs</p>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={3} sm={6} className="mb-4">
-          <Card className="border-0 shadow">
-            <Card.Body>
-              <FontAwesomeIcon icon={faAward} />
-              <h4 className="mb-0">150</h4>
-              <p className="text-muted">Awards</p>
-            </Card.Body>
-          </Card>
-        </Col>
+        {aboutCard.map((element, index) => {
+          return (
+            <Col key={index} xxl={3} xl={3} md={6} sm={12} className="my-2" >
+            <Card className="border-0 shadow py-3">
+              <Card.Body className="d-flex justify-content-center align-items-center gap-4">
+                {element.icon}
+                <div className="d-flex justify-content-center align-items-start flex-column">
+                  <h4 className="mb-0 h1">{element.number}</h4>
+                  <p className="text-muted fs-4">{element.category}</p>
+                </div>
+              </Card.Body>
+            </Card>
+          </Col>
+          )
+        })}
       </Row>
     </Container>
   );
