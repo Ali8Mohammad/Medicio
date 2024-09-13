@@ -2,7 +2,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import "./AboutSection.css";
 import videoFrame from "./../../assets/img/about.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheckDouble } from "@fortawesome/free-solid-svg-icons";
+import { faAward, faFlask, faHospital, faUserDoctor } from "@fortawesome/free-solid-svg-icons";
 
 const AboutSection = () => {
   // titleData
@@ -80,6 +80,7 @@ const AboutSection = () => {
         <Col md={3} sm={6} className="mb-4">
           <Card className="border-0 shadow">
             <Card.Body>
+              <FontAwesomeIcon icon={faUserDoctor} />
               <h4 className="mb-0">25</h4>
               <p className="text-muted">Doctors</p>
             </Card.Body>
@@ -88,6 +89,7 @@ const AboutSection = () => {
         <Col md={3} sm={6} className="mb-4">
           <Card className="border-0 shadow">
             <Card.Body>
+            <FontAwesomeIcon icon={faHospital} />
               <h4 className="mb-0">15</h4>
               <p className="text-muted">Departments</p>
             </Card.Body>
@@ -96,6 +98,7 @@ const AboutSection = () => {
         <Col md={3} sm={6} className="mb-4">
           <Card className="border-0 shadow">
             <Card.Body>
+              <FontAwesomeIcon icon={faFlask} />
               <h4 className="mb-0">8</h4>
               <p className="text-muted">Research Labs</p>
             </Card.Body>
@@ -104,6 +107,7 @@ const AboutSection = () => {
         <Col md={3} sm={6} className="mb-4">
           <Card className="border-0 shadow">
             <Card.Body>
+              <FontAwesomeIcon icon={faAward} />
               <h4 className="mb-0">150</h4>
               <p className="text-muted">Awards</p>
             </Card.Body>

@@ -1,3 +1,17 @@
 .navInfo {
     background-color: var(--main-bgcolor);
+    z-index: 10 !important;
+}
+.justify-end {
+    justify-content: end !important;
+}
+@media (max-width: 767.98px) {
+  .container {
+    max-width: 600px !important;
+  }
+  .navInfoCol {
+    justify-content: start !important;    
+    margin: 0 auto;
+  }
+  
 }

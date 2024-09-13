@@ -1,0 +1,22 @@
+.herocarousel {
+    max-height: calc(100vh - 117px) ;
+}
+.imgSlide {
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.carousel-caption {
+    height: max-content !important;
+    width: 90% !important;
+    background-color: white;
+    color: black !important;
+}
+.carousel-indicators button {
+    border-radius: 50% !important;
+    height: 10px !important;
+    width: 10px !important;
+    opacity: 1 !important;
+}
+.carousel-indicators .active {
+    background-color: var(--main-bgcolor) !important;
+}

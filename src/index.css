@@ -17,3 +17,6 @@
 html {
   font-family: var(--default-font);
 }
+header {
+  max-height: 100vh !important;
+}

@@ -1,0 +1,19 @@
+
+.tabs-section {
+    border-right: 2px solid silver;
+  }
+  
+  .active-tab {
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .content-section img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .divider {
+    border-right: 2px solid silver;
+  }
+  
