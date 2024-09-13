@@ -18,6 +18,11 @@ const Slider = ({ quotes }) => {
     );
   };
 
+
+  const handleIndicatorClick = (index) => {
+    setCurrentIndex(index);
+  };
+
   const getVisibleQuotes = () => {
     const visibleQuotes = [];
     for (let i = 0; i < 3; i++) {
@@ -41,9 +46,7 @@ const Slider = ({ quotes }) => {
         interval={null}
       >
         <Carousel.Item>
-          <Row
-            className="d-flex justify-content-between align-items-center p-0"
-          >
+          <Row className="d-flex justify-content-between align-items-center p-0">
             {getVisibleQuotes().map((quote, index) => (
               <Col
                 key={index}
@@ -67,10 +70,10 @@ const Slider = ({ quotes }) => {
                     </Card.Text>
                     <div className="divbg-white">
                       <Image
-                      className="imageCard"
-                      src={quote.image}
-                      roundedCircle
-                      fluid
+                        className="imageCard"
+                        src={quote.image}
+                        roundedCircle
+                        fluid
                       />
                     </div>
                   </div>
@@ -87,6 +90,16 @@ const Slider = ({ quotes }) => {
           </Row>
         </Carousel.Item>
       </Carousel>
+
+      <div className="d-flex justify-content-center align-items-center gap-2 text-center mt-3">
+        {Array.from({ length: quotes.length }).map((_, index) => (
+          <span
+            className={`sliderControl ${currentIndex === index ? 'Active' : ''}`}
+            key={index}
+            onClick={() => handleIndicatorClick(index)}
+          ></span>
+        ))}
+      </div>
     </>
   );
 };

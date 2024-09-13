@@ -2,11 +2,12 @@ import React from "react";
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
 import { faMapMarkerAlt, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import MainTitle from "../MainTitle/MainTitle";
 
 const ContactSection = () => {
   return (
-    <Container>
-
+    <Container className="my-5">
+      <MainTitle title={'Contact'} par={'Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit'}/>
       <Row className="mb-4">
         <Col>
           <iframe

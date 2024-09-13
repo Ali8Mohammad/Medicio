@@ -27,6 +27,7 @@ import pricingData from './Data/PricingData';
 import AccordionSection from "./Components/Accordion/Accordion";
 import accordionData from "./Data/AccordionData";
 import ContactSection from "./Components/Contact/ContactSection";
+import FooterSection from "./Components/FooterSection/FooterSection";
 
 
 const App = () => {
@@ -58,6 +59,7 @@ const App = () => {
       <PricingSection pricingData={pricingData} />
       <AccordionSection data={accordionData} />
       <ContactSection/>
+      <FooterSection/>
     </>
   );
 };

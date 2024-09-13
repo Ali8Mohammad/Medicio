@@ -94,4 +94,17 @@
   .next-btn {
     margin-right: 20px;
   }
-    
+  .sliderControl {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid var(--main-bgcolor);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .Active {
+    background-color: var(--main-bgcolor);
+  }
+  
