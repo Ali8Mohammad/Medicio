@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import FormControl from './../FormControl/FormControl'; 
+import MainTitle from '../MainTitle/MainTitle';
 
 const fields = [
   { type: 'text', placeholder: 'Enter your name', name: 'name' },
@@ -54,6 +55,7 @@ const AppointmentForm = () => {
 
   return (
     <Container>
+      <MainTitle title={'MAKE AN APPOINTMENT'} par={'Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit'}/>
       <Form onSubmit={handleSubmit}>
         <Row className="mb-4">
           {fields.slice(0, 3).map((field, index) => (

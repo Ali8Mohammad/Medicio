@@ -8,6 +8,7 @@ import neurologyImage  from './../../assets/img/departments-2.jpg'
 import HepatologyImage from './../../assets/img/departments-3.jpg'
 import pediatricsImage from './../../assets/img/departments-4.jpg'
 import ophthalmologistsImage from './../../assets/img/departments-5.jpg'
+import MainTitle from '../MainTitle/MainTitle';
 const tabs = [
   'Cardiology',
   'Neurology',
@@ -63,6 +64,7 @@ const DepartmentsSection = () => {
 
   return (
     <Container>
+      <MainTitle title={'Departments'} par={'Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit'}/>
       <Row className='justify-content-between my-5'>
         <Col xs={12} md={3} className="tabs-section">
           <Tabs

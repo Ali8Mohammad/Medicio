@@ -2,5 +2,16 @@
     color: var(--main-bgcolor) !important;
 }
 .cardsSection {
-    padding: 0 100px;
+    padding: 50px 100px;
+}
+
+@media screen and (max-width: 767px) {
+    .cardsSection {
+        padding: 50px 70px;
+    }
+}
+@media screen and (max-width: 601px) {
+    .cardsSection {
+        padding: 50px 20px;
+    }
 }

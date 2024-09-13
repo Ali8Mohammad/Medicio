@@ -1,11 +1,11 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import './ServicesSection.css'; // ملف CSS مخصص لتنسيق العناصر
+import './ServicesSection.css'; 
+import MainTitle from '../MainTitle/MainTitle';
 
 const ServicesSection = ({ services }) => {
   return (
     <Container className="my-5">
-      <h2 className="text-center mb-4">Services</h2>
-      <p className="text-center text-muted mb-5">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      <MainTitle title={'Services'} par={'Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit'}/>
       <Row>
         {services.map((service, index) => (
           <Col md={4} className="mb-4 text-center" key={index}>

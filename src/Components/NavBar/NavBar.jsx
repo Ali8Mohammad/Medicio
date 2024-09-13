@@ -4,7 +4,7 @@ import './Navbar.css';
 
 const NavBar = ({ logo, items, btn }) => {
   const [fixed, setFixed] = useState(false);
-  const threshold = 100; // القيمة التي تحدد متى يجب تغيير الوضعية
+  const threshold = 100;
 
   useEffect(() => {
     const handleScroll = () => {

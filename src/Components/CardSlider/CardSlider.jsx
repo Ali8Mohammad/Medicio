@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Card, Carousel, Col, Row, Image } from "react-bootstrap";
-import "./CardSlider.css"; // تأكد من تضمين ملف CSS المعدل
+import "./CardSlider.css";
 import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -17,7 +17,7 @@ const Slider = ({ quotes }) => {
     );
   };
 
-  // تحديد المجموعات (عرض 3 في وقت واحد)
+
   const getVisibleQuotes = () => {
     const visibleQuotes = [];
     for (let i = 0; i < 3; i++) {
@@ -29,9 +29,9 @@ const Slider = ({ quotes }) => {
   return (
     <Carousel
       className="px-5"
-      controls={false} // إخفاء الأسهم الافتراضية للسلايدر
-      indicators={false} // إخفاء المؤشرات السفلية
-      interval={null} // تعطيل التنقل التلقائي
+      controls={false} 
+      indicators={false}
+      interval={null} 
     >
       <Carousel.Item>
         <Row className="d-flex justify-content-between align-items-center p-0" style={{ transition:"transform .5s ease" }}>
@@ -73,7 +73,6 @@ const Slider = ({ quotes }) => {
         </Row>
       </Carousel.Item>
 
-      {/* أزرار التنقل المخصصة */}
       <div className="custom-carousel-controls">
         <button className="prev-btn" onClick={handlePrev}>
           &#10094;

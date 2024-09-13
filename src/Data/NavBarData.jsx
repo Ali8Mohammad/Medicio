@@ -11,7 +11,7 @@ const NavBarData = () => {
     { id: 'Contact', name: 'Contact' },
   ];
 
-  return { logo, items }; // يجب إعادة البيانات هنا
+  return { logo, items }; 
 };
 
 export default NavBarData;

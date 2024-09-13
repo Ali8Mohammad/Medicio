@@ -1,0 +1,15 @@
+.mainTitle-h2 {
+    position: relative;
+    max-width: max-content;
+    margin: 20px auto 25px;
+}
+.mainTitle-h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: var(--main-bgcolor);
+    bottom: -20px;
+    left: 50%;
+    transform: translatex(-50%);
+}

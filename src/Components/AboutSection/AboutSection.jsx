@@ -3,13 +3,10 @@ import "./AboutSection.css";
 import videoFrame from "./../../assets/img/about.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAward, faFlask, faHospital, faUserDoctor } from "@fortawesome/free-solid-svg-icons";
+import MainTitle from "../MainTitle/MainTitle";
 
 const AboutSection = () => {
   // titleData
-  const mainTitle = {
-    title: "About Us",
-    par: "Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit",
-  };
   const aboutData = {
     img: videoFrame,
     caption:
@@ -31,10 +28,7 @@ const AboutSection = () => {
   return (
     <Container className="my-5">
       <Row className="text-center mb-4">
-        <Col>
-          <h2>{mainTitle.title}</h2>
-          <p className="text-muted">{mainTitle.par}</p>
-        </Col>
+        <MainTitle title={"About Us"} par={"Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit"}/>
       </Row>
       <Row className="align-items-center">
         <Col md={6} className="mb-4 mb-md-0">
